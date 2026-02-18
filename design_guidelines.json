@@ -1,0 +1,117 @@
+{
+  "project_name": "ChurnGuard AI Dashboard",
+  "design_philosophy": {
+    "identity": "E1 - The Anti-AI Designer",
+    "core_concept": "The High-Contrast Command Center",
+    "vibe": "Precision, Authority, Proactive Intelligence. Not just a dashboard, but a decision engine.",
+    "theme_strategy": "Hybrid Swiss-Tech: Stark White data surfaces + Deep Obsidian sidebar. High contrast for readability, electric accents for AI actions."
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Chivo, sans-serif",
+      "body": "Public Sans, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "installation_instructions": "Add to index.css via @import or HTML head: https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@300;400;500;600&display=swap",
+    "usage_rules": {
+      "headings": "Use Chivo Black (900) for major stats, Light (300) for section titles. Tracking-tight.",
+      "body": "Public Sans for all UI text. Tracking-normal.",
+      "numbers": "JetBrains Mono for ALL monetary values (CLV, MRR), percentages, and risk scores. Tabular nums are mandatory."
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": "#111827",
+      "primary_foreground": "#F9FAFB",
+      "secondary": "#F3F4F6",
+      "secondary_foreground": "#1F2937",
+      "accent": "#2563EB",
+      "accent_foreground": "#FFFFFF",
+      "background": "#F9FAFB",
+      "surface": "#FFFFFF",
+      "border": "#E5E7EB",
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "danger": "#EF4444",
+      "ai_magic": "#7C3AED"
+    },
+    "gradients": {
+      "ai_glow": "linear-gradient(135deg, #7C3AED 0%, #2563EB 100%)",
+      "risk_gradient": "linear-gradient(to right, #10B981, #F59E0B, #EF4444)"
+    },
+    "rules": "No generic gradients. Use flat colors for data. Use the 'ai_glow' ONLY for the GPT-5.2 recommendation button and active prediction states."
+  },
+  "layout_grid": {
+    "type": "Bento Grid Mode B (High Density)",
+    "container_max_width": "max-w-[1920px]",
+    "spacing_scale": {
+      "section_gap": "gap-6",
+      "widget_gap": "gap-4",
+      "internal_padding": "p-6"
+    },
+    "structure": {
+      "sidebar": "Fixed left, w-64, bg-primary text-primary-foreground",
+      "main_content": "Flex-1, bg-background, p-8 overflow-y-auto"
+    }
+  },
+  "components": {
+    "cards": {
+      "style": "Sharp corners or sm radius (rounded-sm). Border: 1px solid #E5E7EB. Shadow: none. Hover: border-accent/50 transition-colors.",
+      "header_rule": "Card headers must be uppercase, text-xs, tracking-widest, text-muted-foreground."
+    },
+    "buttons": {
+      "primary": "bg-primary text-white rounded-md px-6 py-2.5 hover:bg-primary/90 transition-all active:scale-95",
+      "ai_action": "bg-[url('https://grainy-gradients.vercel.app/noise.svg')], bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40"
+    },
+    "charts": {
+      "library": "Recharts (via Shadcn)",
+      "styling": "Minimalist. No grid lines (or very subtle). Tooltips must be dark mode (bg-gray-900 text-white).",
+      "colors": {
+        "churn": "#EF4444",
+        "retention": "#10B981",
+        "neutral": "#9CA3AF"
+      }
+    }
+  },
+  "visual_assets": {
+    "images": [
+      {
+        "category": "Brand Logo",
+        "url": "https://images.unsplash.com/photo-1686140386811-099f53c0dd54?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2ODh8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhYnN0cmFjdCUyMHRlY2glMjBjb21wYW55JTIwbG9nbyUyMG1pbmltYWwlMjBnZW9tZXRyaWN8ZW58MHx8fHwxNzcxMzcxMTkyfDA&ixlib=rb-4.1.0&q=85",
+        "usage": "Top left of sidebar. Mix-blend-mode: normal."
+      },
+      {
+        "category": "User Avatar",
+        "url": "https://images.unsplash.com/photo-1758600587728-9bde755354ad?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzc3dvbWFuJTIwcG9ydHJhaXQlMjBzdHVkaW8lMjBoZWFkc2hvdHxlbnwwfHx8fDE3NzEzNzExOTF8MA&ixlib=rb-4.1.0&q=85",
+        "usage": "Customer Profile header. Rounded-full."
+      }
+    ],
+    "icons": {
+      "library": "Lucide React (Default)",
+      "style": "Stroke width 1.5px. Size 16px or 20px."
+    }
+  },
+  "motion": {
+    "library": "Framer Motion",
+    "page_transition": {
+      "initial": { "opacity": 0, "y": 10 },
+      "animate": { "opacity": 1, "y": 0 },
+      "exit": { "opacity": 0, "y": -10 },
+      "transition": { "duration": 0.3, "ease": "easeOut" }
+    },
+    "micro_interactions": "Buttons scale down 0.95 on click. Cards lift -2px on hover."
+  },
+  "universal_guidelines": [
+    "Do NOT use gradients for backgrounds. Use solid whites and grays.",
+    "All interactive elements MUST have data-testid attributes.",
+    "Use 'sonner' for toast notifications.",
+    "Do NOT center align the app container.",
+    "For the AI Recommendation section, use a 'magic' border effect or subtle glow to distinguish it from standard data.",
+    "Ensure high contrast for all text (WCAG AA)."
+  ],
+  "page_specifics": {
+    "dashboard": "Bento Grid layout. KPIs at top. Churn Risk map in center. Recent activity list on right.",
+    "customer_analysis": "Split view: Left profile (sticky), Right detailed history/charts.",
+    "predictions": "Form-based input with instant result visualization. Use a 'Confidence Gauge' for the prediction score."
+  }
+}
