@@ -60,11 +60,9 @@ Create a Customer Segmentation and Retention Analysis dashboard using Telco Cust
 4. Create retention campaign tracking
 5. Add dashboard date range filters
 
-**Dataset:** https://www.kaggle.com/datasets/blastchar/telco-customer-churn
+**Dataset:** 
+- https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 
-Datasets
-Kaggle Telecom Churn Dataset: https://www.kaggle.com/datasets/blast...
-Kaggle Online Retail Dataset: https://www.kaggle.com/datasets/vijay...
 
 
 
