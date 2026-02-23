@@ -345,13 +345,13 @@ async def get_ai_recommendations(request: AIRecommendationRequest):
             'customer_id': request.customer_id,
             'churn_probability': request.churn_probability,
             'risk_level': request.risk_level,
-            'recommendation': response,
+            'recommendation': response_text,
             'created_at': datetime.now(timezone.utc).isoformat()
         }
         await db.ai_recommendations.insert_one(recommendation_doc)
         
         return {
-            'recommendation': response,
+            'recommendation': response_text,
             'generated_at': datetime.now(timezone.utc).isoformat()
         }
     except HTTPException:
